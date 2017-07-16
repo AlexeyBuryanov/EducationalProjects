@@ -1,0 +1,23 @@
+﻿<Window x:Name="aboutWindow" x:Class="WPF_Containers.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Containers"
+        mc:Ignorable="d"
+        Title="О программе" 
+        Height="483" Width="500"
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        MouseLeftButtonDown="aboutWindow_MouseLeftButtonDown" ResizeMode="NoResize">
+    <Canvas>
+        <Image x:Name="image" 
+               Height="483" Width="500" Source="Images/wpf-icon.jpg" Stretch="UniformToFill"/>
+        <TextBlock x:Name="textBlock0" TextWrapping="Wrap" 
+                   Text="Программа демонстрирует наглядный пример работы с компоновками Grid, StackPanel, DockPanel и Canvas в Windows Presentation Foundation" 
+                   Canvas.Left="10" Canvas.Top="10" Height="63" Width="472" FontWeight="Bold" Foreground="Black" Padding="20" TextAlignment="Center"/>
+        <TextBlock x:Name="textBlock1" TextWrapping="Wrap" 
+                   Text="Copyright © Алексей Бурьянов, 2017. All Rights Reserved." 
+                   Canvas.Left="10" Canvas.Top="99" Height="54" Width="472" FontWeight="Bold" Foreground="Black" TextAlignment="Center"/>
+    </Canvas>
+</Window>

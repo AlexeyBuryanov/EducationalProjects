@@ -1,0 +1,32 @@
+﻿<Window x:Class="Car_company.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_company"
+        mc:Ignorable="d"
+        Title="О программе" 
+        Height="300" Width="520"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        ShowInTaskbar="False"
+        MouseLeftButtonDown="aboutWindow_MouseLeftButtonDown" WindowStyle="None">
+        <Window.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFE2E2E2" Offset="0"/>
+                <GradientStop Color="#FFF1F1F1" Offset="0.257"/>
+                <GradientStop Color="#FFEEEEEE" Offset="0.473"/>
+                <GradientStop Color="WhiteSmoke" Offset="0.757"/>
+            </LinearGradientBrush>
+        </Window.Background>
+    <Canvas>
+        <TextBlock x:Name="textBlock0" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="О программе" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" 
+                   Text="Данное приложение демонстрирует работу с такими элементами управления как: Menu, ContextMenu, ToolBar, ToolBarTray, DataGrid, StatusBar." VerticalAlignment="Top" Height="37" Canvas.Left="10" Canvas.Top="59" Width="518"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="10,101,0,0" TextWrapping="Wrap" 
+                   Text="Список данных с автобусами хранится в XML-файле." VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock3" TextWrapping="Wrap" 
+                   Text="Copyright © Алексей Бурьянов, 2017. All Rights Reserved." 
+                   Canvas.Left="163" Canvas.Top="280" Height="20" Width="347" FontWeight="Bold" Foreground="#FFA29797" TextAlignment="Center"/>
+    </Canvas>
+</Window>

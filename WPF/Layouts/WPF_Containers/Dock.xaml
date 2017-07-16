@@ -1,0 +1,38 @@
+﻿<Window x:Class="WPF_Containers.Dock"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Containers"
+        mc:Ignorable="d"
+        Title="Dock" 
+        Height="250" Width="310.169" 
+        ResizeMode="CanMinimize" 
+        WindowStartupLocation="CenterScreen">
+    <DockPanel LastChildFill="false">
+        <DockPanel DockPanel.Dock="Top" Margin="0">
+            <DockPanel>
+                <TextBox x:Name="textBox_Rub"    DockPanel.Dock="top" Height="23" Margin="10,20,0,20" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"/>
+                <TextBox x:Name="textBox_Euro"   DockPanel.Dock="top" Height="23" Margin="10,0,0,20"  TextWrapping="Wrap" Text="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"/>
+                <TextBox x:Name="textBox_Dollar" DockPanel.Dock="top" Height="23" Margin="10,0,0,0"   TextWrapping="Wrap" Text="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"/>
+            </DockPanel>
+            <DockPanel Margin="7,20,0,0" Width="17">
+                <TextBlock x:Name="textBlock0" DockPanel.Dock="top" Margin="0"    TextWrapping="Wrap" Text="₽" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16"/>
+                <TextBlock x:Name="textBlock1" DockPanel.Dock="top" Margin="0,22" TextWrapping="Wrap" Text="€" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16"/>
+                <TextBlock x:Name="textBlock2" DockPanel.Dock="top" Margin="0"    TextWrapping="Wrap" Text="$" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16"/>
+            </DockPanel>
+            <DockPanel Width="114">
+                <GroupBox x:Name="groupBox" Header="Курс: " Height="117" VerticalAlignment="Top" Margin="0,19,0,0">
+                    <DockPanel>
+                        <RadioButton x:Name="rbCourseDef"  DockPanel.Dock="top"    Content="обычный"  HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                        <RadioButton x:Name="rbCoursePref" DockPanel.Dock="Bottom" Content="льготный" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top"/>
+                    </DockPanel>
+                </GroupBox>
+            </DockPanel>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Top" Margin="0,20,0,0" Height="67" Background="#FFF4F4F5">
+            <Button x:Name="button_Cancel" Content="Отменить" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="110,20,10,0" Width="75" IsCancel="True" IsDefault="True" Click="button_Cancel_Click"/>
+            <Button x:Name="button_OK"     Content="OK"       VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,20,0,0" Width="75" />
+        </DockPanel>
+    </DockPanel>
+</Window>

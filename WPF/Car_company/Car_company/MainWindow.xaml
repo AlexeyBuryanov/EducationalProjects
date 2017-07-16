@@ -1,0 +1,85 @@
+﻿<Window x:Class="Car_company.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_company"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+        
+        mc:Ignorable="d"
+        Title="Список автобусов автопредприятия" 
+        Height="500" Width="700" 
+        ResizeMode="CanMinimize" 
+        WindowStartupLocation="CenterScreen"
+        Icon="Images/main.ico" Closed="Window_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Height="25" Background="#FFEEF5FD" Grid.ColumnSpan="2">
+            <MenuItem Header="Файл">
+                <MenuItem.Icon>
+                    <Image Source="Images/Menu/file.ico"></Image>
+                </MenuItem.Icon>
+                <MenuItem Header="Выход" Click="Exit_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Menu/exit.ico"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Справка">
+                <MenuItem.Icon>
+                    <Image Source="Images/Menu/help.ico"></Image>
+                </MenuItem.Icon>
+                <MenuItem Header="О программе..." Click="aboutWinShow_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray Orientation="Vertical" Grid.Row="1" Width="43">
+            <ToolBar>
+                <Button Margin="0 10 0 0" ToolTip="Удалить автобус" Click="Remove_Click">
+                    <Image Source="Images/ToolBar/delete.ico" Width="32"/>
+                </Button>
+                <Button Margin="0 280 0 0" ToolTip="Завершение работы" Click="Exit_Click">
+                    <Image Source="Images/ToolBar/exit.ico" Width="32"/>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        <DataGrid Name="dataGridMain" Grid.Row="1" Grid.Column="1" Margin="3"
+                  RowBackground="LightGray"  AlternatingRowBackground="White" 
+                  CanUserReorderColumns="False" CanUserResizeColumns="False" AutoGenerateColumns="False"
+                  GridLinesVisibility="Vertical"
+                  SelectionUnit="FullRow">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Фамилия И.О." Binding="{Binding Path=Surname}"      Width="150"/>
+                <DataGridTextColumn Header="Номера"       Binding="{Binding Path=Numbers}"      Width="120"/>
+                <DataGridTextColumn Header="Марка"        Binding="{Binding Path=Manufacturer}" Width="120"/>
+                <DataGridTextColumn Header="Год выпуска"  Binding="{Binding Path=YearOfIssue}"  Width="120"/>
+                <DataGridTextColumn Header="Пробег"       Binding="{Binding Path=Mileage}"      Width="115"/>
+            </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu Name="dataGridContextMenu">
+                    <MenuItem Header="Удалить" Click="Remove_Click"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="10" Text="Год выпуска: "  Foreground="DarkBlue" FontSize="14"/>
+                        <TextBlock Margin="0 10 10 10" Text="{Binding Path=YearOfIssue}" Foreground="DarkBlue" FontSize="14" FontWeight="Bold"/>
+                        <TextBlock Margin="0 10 10 10" Text="Производитель: "  Foreground="DarkBlue" FontSize="14"/>
+                        <TextBlock Margin="0 10 10 10" Text="{Binding Path=Manufacturer}" Foreground="DarkBlue" FontSize="14" FontWeight="Bold"/>
+                    </StackPanel>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
+        </DataGrid>
+        <StatusBar Grid.Row="3" Grid.ColumnSpan="2" Background="#FFEEF5FD">
+            <TextBlock Margin="50 0 0 0" Name="statusBar">Добро пожаловать</TextBlock>
+        </StatusBar>
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDataBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DataBus>
+    <Surname>Мичурин В.А.</Surname>
+    <Numbers>АН8261ХА</Numbers>
+    <Manufacturer>Mersedes GL</Manufacturer>
+    <YearOfIssue>2012</YearOfIssue>
+    <Mileage>382532.54</Mileage>
+  </DataBus>
+  <DataBus>
+    <Surname>Тимирязев П.Е.</Surname>
+    <Numbers>АН9888ХА</Numbers>
+    <Manufacturer>ISUZU</Manufacturer>
+    <YearOfIssue>2010</YearOfIssue>
+    <Mileage>441442.01</Mileage>
+  </DataBus>
+  <DataBus>
+    <Surname>Ким Чен</Surname>
+    <Numbers>АН7887ЕН</Numbers>
+    <Manufacturer>Газель</Manufacturer>
+    <YearOfIssue>2012</YearOfIssue>
+    <Mileage>120443</Mileage>
+  </DataBus>
+  <DataBus>
+    <Surname>Петрова Р.Н.</Surname>
+    <Numbers>АН6776ЕЕ</Numbers>
+    <Manufacturer>Богдан</Manufacturer>
+    <YearOfIssue>2010</YearOfIssue>
+    <Mileage>256000</Mileage>
+  </DataBus>
+  <DataBus>
+    <Surname>Озерова У.Е.</Surname>
+    <Numbers>АН6533НН</Numbers>
+    <Manufacturer>Mersedes GL</Manufacturer>
+    <YearOfIssue>2012</YearOfIssue>
+    <Mileage>250211</Mileage>
+  </DataBus>
+</ArrayOfDataBus>

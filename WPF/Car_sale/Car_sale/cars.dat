@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Car>
+    <Manufacturer>ВАЗ 2106</Manufacturer>
+    <TransportCategory>Легковой</TransportCategory>
+    <TypePayment>Наличные</TypePayment>
+    <Optional>
+      <criterion1>Магнитола</criterion1>
+      <criterion3>GPS Навигатор</criterion3>
+      <criterion5>Бортовой компьютер</criterion5>
+    </Optional>
+  </Car>
+  <Car>
+    <Manufacturer>Audi</Manufacturer>
+    <TransportCategory>Специальный</TransportCategory>
+    <TypePayment>Электронные кошельки</TypePayment>
+    <Optional>
+      <criterion1>Магнитола</criterion1>
+      <criterion2>Премиальная акустика</criterion2>
+      <criterion3>GPS Навигатор</criterion3>
+      <criterion4>Кондиционер</criterion4>
+      <criterion5>Бортовой компьютер</criterion5>
+    </Optional>
+  </Car>
+  <Car>
+    <Manufacturer>BMW</Manufacturer>
+    <TransportCategory>Грузовой</TransportCategory>
+    <TypePayment>VISA, MasterCard</TypePayment>
+    <Optional>
+      <criterion1>Магнитола</criterion1>
+      <criterion2>*не выбрано*</criterion2>
+      <criterion3>*не выбрано*</criterion3>
+      <criterion4>*не выбрано*</criterion4>
+      <criterion5>*не выбрано*</criterion5>
+    </Optional>
+  </Car>
+</ArrayOfCar>
