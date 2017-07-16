@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<ArrayOfStudent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Student>
+    <Id>1</Id>
+    <Surname>Петрова Н.Н.</Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1999-05-11T00:00:00</BirthDate>
+    <Course>1</Course>
+    <Group>ПСД 1-31</Group>
+    <Scholarship>true</Scholarship>
+  </Student>
+  <Student>
+    <Id>2</Id>
+    <Surname>Оладушкин Е.К.</Surname>
+    <Gender>М</Gender>
+    <BirthDate>2000-01-04T00:00:00</BirthDate>
+    <Course>1</Course>
+    <Group>ПСУ 1-31</Group>
+    <Scholarship>false</Scholarship>
+  </Student>
+  <Student>
+    <Id>3</Id>
+    <Surname>Мичурин В.О.</Surname>
+    <Gender>М</Gender>
+    <BirthDate>2000-01-01T00:00:00</BirthDate>
+    <Course>2</Course>
+    <Group>ЕКО 15-Д91</Group>
+    <Scholarship>false</Scholarship>
+  </Student>
+  <Student>
+    <Id>4</Id>
+    <Surname>Василиса М.А.</Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1997-02-02T00:00:00</BirthDate>
+    <Course>2</Course>
+    <Group>ПСД 1-29</Group>
+    <Scholarship>true</Scholarship>
+  </Student>
+  <Student>
+    <Id>5</Id>
+    <Surname>Киркоров Ф.Б.</Surname>
+    <Gender>М</Gender>
+    <BirthDate>2001-07-20T00:00:00</BirthDate>
+    <Course>1</Course>
+    <Group>ЕКО 14-А81</Group>
+    <Scholarship>true</Scholarship>
+  </Student>
+  <Student>
+    <Id>6</Id>
+    <Surname>Пирожков А.С.</Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1991-05-19T00:00:00</BirthDate>
+    <Course>4</Course>
+    <Group>ЕКО 15-А91</Group>
+    <Scholarship>false</Scholarship>
+  </Student>
+  <Student>
+    <Id>7</Id>
+    <Surname>Некрасова А.Д.</Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1985-01-31T00:00:00</BirthDate>
+    <Course>5</Course>
+    <Group>ПСУ 1-31</Group>
+    <Scholarship>true</Scholarship>
+  </Student>
+</ArrayOfStudent>

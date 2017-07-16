@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<ArrayOfStudent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Student>
+    <Id>7</Id>
+    <Surname>Жорес Н.Г. </Surname>
+    <Gender>М</Gender>
+    <BirthDate>2001-08-04T00:00:00</BirthDate>
+    <Course>1</Course>
+    <Group>ПСУ 1-31</Group>
+    <Scholarship>false</Scholarship>
+    <Marks>
+      <Mark>
+        <Subject>C#</Subject>
+        <Level>11</Level>
+      </Mark>
+      <Mark>
+        <Subject>WindowsForms</Subject>
+        <Level>8</Level>
+      </Mark>
+    </Marks>
+  </Student>
+  <Student>
+    <Id>1</Id>
+    <Surname>Петрова Н.Н.</Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1999-05-11T00:00:00</BirthDate>
+    <Course>1</Course>
+    <Group>ПСД 1-31</Group>
+    <Scholarship>true</Scholarship>
+    <Marks>
+      <Mark>
+        <Subject>Программирование</Subject>
+        <Level>5</Level>
+      </Mark>
+      <Mark>
+        <Subject>C#</Subject>
+        <Level>5</Level>
+      </Mark>
+      <Mark>
+        <Subject>JS</Subject>
+        <Level>4</Level>
+      </Mark>
+    </Marks>
+  </Student>
+  <Student>
+    <Id>2</Id>
+    <Surname>Оладушкин Е.К.</Surname>
+    <Gender>М</Gender>
+    <BirthDate>2000-01-04T00:00:00</BirthDate>
+    <Course>1</Course>
+    <Group>ПСУ 1-31</Group>
+    <Scholarship>false</Scholarship>
+    <Marks>
+      <Mark>
+        <Subject>C#</Subject>
+        <Level>4</Level>
+      </Mark>
+      <Mark>
+        <Subject>JS</Subject>
+        <Level>5</Level>
+      </Mark>
+    </Marks>
+  </Student>
+  <Student>
+    <Id>4</Id>
+    <Surname>Терешкова В.Н.</Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1999-06-05T00:00:00</BirthDate>
+    <Course>2</Course>
+    <Group>ЕКО 15-А91</Group>
+    <Scholarship>true</Scholarship>
+    <Marks>
+      <Mark>
+        <Subject>C#</Subject>
+        <Level>4</Level>
+      </Mark>
+      <Mark>
+        <Subject>JS</Subject>
+        <Level>4</Level>
+      </Mark>
+      <Mark>
+        <Subject>HTML_CSS</Subject>
+        <Level>5</Level>
+      </Mark>
+    </Marks>
+  </Student>
+  <Student>
+    <Id>5</Id>
+    <Surname>Этот Ч.М.</Surname>
+    <Gender>М</Gender>
+    <BirthDate>1990-12-12T00:00:00</BirthDate>
+    <Course>2</Course>
+    <Group>ПСУ 1-31</Group>
+    <Scholarship>false</Scholarship>
+    <Marks>
+      <Mark>
+        <Subject>JS</Subject>
+        <Level>4</Level>
+      </Mark>
+      <Mark>
+        <Subject>C#</Subject>
+        <Level>3</Level>
+      </Mark>
+      <Mark>
+        <Subject>HTML_CSS</Subject>
+        <Level>2</Level>
+      </Mark>
+    </Marks>
+  </Student>
+  <Student>
+    <Id>8</Id>
+    <Surname>Мальчова Р.В. </Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1997-01-07T00:00:00</BirthDate>
+    <Course>5</Course>
+    <Group>ЕКО 15-А91</Group>
+    <Scholarship>true</Scholarship>
+    <Marks />
+  </Student>
+  <Student>
+    <Id>6</Id>
+    <Surname>Приветова Н.Г. </Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1999-07-19T00:00:00</BirthDate>
+    <Course>3</Course>
+    <Group>ЕКО 14-П81</Group>
+    <Scholarship>true</Scholarship>
+    <Marks />
+  </Student>
+</ArrayOfStudent>

@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnPhotoChoice.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnPhotoChoice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 193</value>
+  </data>
+  <data name="btnPhotoChoice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnPhotoChoice.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnPhotoChoice.Text" xml:space="preserve">
+    <value>Выбрать фотографию корабля</value>
+  </data>
+  <data name="&gt;&gt;btnPhotoChoice.Name" xml:space="preserve">
+    <value>btnPhotoChoice</value>
+  </data>
+  <data name="&gt;&gt;btnPhotoChoice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPhotoChoice.Parent" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;btnPhotoChoice.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txbMaxSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 108</value>
+  </data>
+  <data name="txbMaxSpeed.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="txbMaxSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="txbMaxSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txbMaxSpeed.Name" xml:space="preserve">
+    <value>txbMaxSpeed</value>
+  </data>
+  <data name="&gt;&gt;txbMaxSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbMaxSpeed.Parent" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;txbMaxSpeed.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblMaxSpeed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMaxSpeed.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMaxSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 112</value>
+  </data>
+  <data name="lblMaxSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 13</value>
+  </data>
+  <data name="lblMaxSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblMaxSpeed.Text" xml:space="preserve">
+    <value>Максмальная скорость (узлов):</value>
+  </data>
+  <data name="&gt;&gt;lblMaxSpeed.Name" xml:space="preserve">
+    <value>lblMaxSpeed</value>
+  </data>
+  <data name="&gt;&gt;lblMaxSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMaxSpeed.Parent" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;lblMaxSpeed.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txbCruisingRange.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 148</value>
+  </data>
+  <data name="txbCruisingRange.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="txbCruisingRange.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="txbCruisingRange.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txbCruisingRange.Name" xml:space="preserve">
+    <value>txbCruisingRange</value>
+  </data>
+  <data name="&gt;&gt;txbCruisingRange.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbCruisingRange.Parent" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;txbCruisingRange.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblCruiseRange.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCruiseRange.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblCruiseRange.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 152</value>
+  </data>
+  <data name="lblCruiseRange.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 13</value>
+  </data>
+  <data name="lblCruiseRange.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblCruiseRange.Text" xml:space="preserve">
+    <value>Дальность плавания (морских миль):</value>
+  </data>
+  <data name="&gt;&gt;lblCruiseRange.Name" xml:space="preserve">
+    <value>lblCruiseRange</value>
+  </data>
+  <data name="&gt;&gt;lblCruiseRange.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCruiseRange.Parent" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;lblCruiseRange.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txbDisplacement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 68</value>
+  </data>
+  <data name="txbDisplacement.MaxLength" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="txbDisplacement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 20</value>
+  </data>
+  <data name="txbDisplacement.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txbDisplacement.Name" xml:space="preserve">
+    <value>txbDisplacement</value>
+  </data>
+  <data name="&gt;&gt;txbDisplacement.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbDisplacement.Parent" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;txbDisplacement.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblDisplacement.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDisplacement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblDisplacement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 72</value>
+  </data>
+  <data name="lblDisplacement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 13</value>
+  </data>
+  <data name="lblDisplacement.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblDisplacement.Text" xml:space="preserve">
+    <value>Водоизмещение (тонн):</value>
+  </data>
+  <data name="&gt;&gt;lblDisplacement.Name" xml:space="preserve">
+    <value>lblDisplacement</value>
+  </data>
+  <data name="&gt;&gt;lblDisplacement.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDisplacement.Parent" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;lblDisplacement.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txbName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 28</value>
+  </data>
+  <data name="txbName.MaxLength" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="txbName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 20</value>
+  </data>
+  <data name="txbName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txbName.Name" xml:space="preserve">
+    <value>txbName</value>
+  </data>
+  <data name="&gt;&gt;txbName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbName.Parent" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;txbName.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 32</value>
+  </data>
+  <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 13</value>
+  </data>
+  <data name="lblName.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblName.Text" xml:space="preserve">
+    <value>Название корабля: </value>
+  </data>
+  <data name="&gt;&gt;lblName.Name" xml:space="preserve">
+    <value>lblName</value>
+  </data>
+  <data name="&gt;&gt;lblName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblName.Parent" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;lblName.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 280</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 23</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnSaveOk.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnSaveOk.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSaveOk.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 280</value>
+  </data>
+  <data name="btnSaveOk.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 23</value>
+  </data>
+  <data name="btnSaveOk.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnSaveOk.Text" xml:space="preserve">
+    <value>Сохранить и закрыть</value>
+  </data>
+  <data name="&gt;&gt;btnSaveOk.Name" xml:space="preserve">
+    <value>btnSaveOk</value>
+  </data>
+  <data name="&gt;&gt;btnSaveOk.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSaveOk.Parent" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;btnSaveOk.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="grbData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="grbData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>336, 320</value>
+  </data>
+  <data name="grbData.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grbData.Text" xml:space="preserve">
+    <value> Данные о корабле: </value>
+  </data>
+  <data name="&gt;&gt;grbData.Name" xml:space="preserve">
+    <value>grbData</value>
+  </data>
+  <data name="&gt;&gt;grbData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grbData.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grbData.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pbxPhoto.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pbxPhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbxPhoto.InitialImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="pbxPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 16</value>
+  </data>
+  <data name="pbxPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>442, 301</value>
+  </data>
+  <data name="pbxPhoto.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pbxPhoto.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pbxPhoto.Name" xml:space="preserve">
+    <value>pbxPhoto</value>
+  </data>
+  <data name="&gt;&gt;pbxPhoto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbxPhoto.Parent" xml:space="preserve">
+    <value>grbPhoto</value>
+  </data>
+  <data name="&gt;&gt;pbxPhoto.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grbPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>352, 8</value>
+  </data>
+  <data name="grbPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>448, 320</value>
+  </data>
+  <data name="grbPhoto.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="grbPhoto.Text" xml:space="preserve">
+    <value> Фото корабля: </value>
+  </data>
+  <data name="&gt;&gt;grbPhoto.Name" xml:space="preserve">
+    <value>grbPhoto</value>
+  </data>
+  <data name="&gt;&gt;grbPhoto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grbPhoto.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grbPhoto.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="ofdPhoto.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="ofdPhoto.Filter" xml:space="preserve">
+    <value>Файлы JPEG (*.jpeg)|*.jpg|Файлы PNG(*.png)|*.png|Файлы JPG и PNG (*.png, *.jpg)|*.png;*.jpg|Все файлы (*.*)|*.*</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>817, 339</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Добавление/Редактирование корабля</value>
+  </data>
+  <data name="&gt;&gt;ofdPhoto.Name" xml:space="preserve">
+    <value>ofdPhoto</value>
+  </data>
+  <data name="&gt;&gt;ofdPhoto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>EditForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

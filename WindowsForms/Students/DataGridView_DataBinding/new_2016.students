@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<ArrayOfStudent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Student>
+    <Id>1</Id>
+    <Surname>Пашечкина Р.Г.</Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1998-05-12T00:00:00</BirthDate>
+    <Course>1</Course>
+    <Group>ЕКО 15-Д91</Group>
+    <Scholarship>true</Scholarship>
+    <Marks>
+      <Mark>
+        <Subject>C#</Subject>
+        <Level>10</Level>
+      </Mark>
+      <Mark>
+        <Subject>WindowsForms</Subject>
+        <Level>11</Level>
+      </Mark>
+    </Marks>
+  </Student>
+  <Student>
+    <Id>5</Id>
+    <Surname>Караникола Л.Г.</Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1998-06-12T00:00:00</BirthDate>
+    <Course>3</Course>
+    <Group>ЕКО 15-Д91</Group>
+    <Scholarship>false</Scholarship>
+    <Marks>
+      <Mark>
+        <Subject>Аппаратное обеспечение</Subject>
+        <Level>10</Level>
+      </Mark>
+      <Mark>
+        <Subject>WindowsForms</Subject>
+        <Level>11</Level>
+      </Mark>
+      <Mark>
+        <Subject>ООП C++</Subject>
+        <Level>9</Level>
+      </Mark>
+    </Marks>
+  </Student>
+  <Student>
+    <Id>3</Id>
+    <Surname>Васильева Г.Ш.</Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1999-08-19T00:00:00</BirthDate>
+    <Course>1</Course>
+    <Group>ПСД 1-31</Group>
+    <Scholarship>true</Scholarship>
+    <Marks>
+      <Mark>
+        <Subject>Основы программирования</Subject>
+        <Level>10</Level>
+      </Mark>
+      <Mark>
+        <Subject>Аппаратное обеспечение</Subject>
+        <Level>7</Level>
+      </Mark>
+      <Mark>
+        <Subject>ООП C++</Subject>
+        <Level>8</Level>
+      </Mark>
+      <Mark>
+        <Subject>JavaScript</Subject>
+        <Level>7</Level>
+      </Mark>
+      <Mark>
+        <Subject>WindowsForms</Subject>
+        <Level>12</Level>
+      </Mark>
+      <Mark>
+        <Subject>DT</Subject>
+        <Level>10</Level>
+      </Mark>
+    </Marks>
+  </Student>
+  <Student>
+    <Id>4</Id>
+    <Surname>Романова А.Г.</Surname>
+    <Gender>Ж</Gender>
+    <BirthDate>1998-07-05T00:00:00</BirthDate>
+    <Course>1</Course>
+    <Group>ПСД 1-31</Group>
+    <Scholarship>true</Scholarship>
+    <Marks>
+      <Mark>
+        <Subject>C#</Subject>
+        <Level>9</Level>
+      </Mark>
+      <Mark>
+        <Subject>HTML_CSS</Subject>
+        <Level>10</Level>
+      </Mark>
+      <Mark>
+        <Subject>WindowsForms</Subject>
+        <Level>8</Level>
+      </Mark>
+    </Marks>
+  </Student>
+  <Student>
+    <Id>2</Id>
+    <Surname>Семенов-Тяньшанський И.Ш.</Surname>
+    <Gender>М</Gender>
+    <BirthDate>1998-09-05T00:00:00</BirthDate>
+    <Course>1</Course>
+    <Group>ЕКО 15-П91</Group>
+    <Scholarship>true</Scholarship>
+    <Marks>
+      <Mark>
+        <Subject>JavaScript</Subject>
+        <Level>8</Level>
+      </Mark>
+      <Mark>
+        <Subject>WindowsForms</Subject>
+        <Level>9</Level>
+      </Mark>
+      <Mark>
+        <Subject>DT</Subject>
+        <Level>12</Level>
+      </Mark>
+      <Mark>
+        <Subject>HTML_CSS</Subject>
+        <Level>7</Level>
+      </Mark>
+    </Marks>
+  </Student>
+  <Student>
+    <Id>6</Id>
+    <Surname>Арбузов Г.Г.</Surname>
+    <Gender>М</Gender>
+    <BirthDate>1990-01-01T00:00:00</BirthDate>
+    <Course>5</Course>
+    <Group>ЕКО 14-А81</Group>
+    <Scholarship>false</Scholarship>
+    <Marks>
+      <Mark>
+        <Subject>WinAPI</Subject>
+        <Level>7</Level>
+      </Mark>
+      <Mark>
+        <Subject>WindowsForms</Subject>
+        <Level>9</Level>
+      </Mark>
+      <Mark>
+        <Subject>DT</Subject>
+        <Level>10</Level>
+      </Mark>
+    </Marks>
+  </Student>
+</ArrayOfStudent>
