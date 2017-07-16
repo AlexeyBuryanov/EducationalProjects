@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Диалоговые окна">
+      <UniqueIdentifier>{3669fda3-71ec-46b3-95cc-bd3117bc0ee9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Диалоговые окна">
+      <UniqueIdentifier>{e7396e9e-2345-49b4-82ba-f8e850ad0e75}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="PicAbout.bmp">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="IconBig.ico">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="IconSmall.ico">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="Background.bmp">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Includes.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="MainWindow.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="WinMain.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutBox.h">
+      <Filter>Заголовочные файлы\Диалоговые окна</Filter>
+    </ClInclude>
+    <ClInclude Include="InputLineSegBox.h">
+      <Filter>Заголовочные файлы\Диалоговые окна</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSizeRectBox.h">
+      <Filter>Заголовочные файлы\Диалоговые окна</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutBox.cpp">
+      <Filter>Файлы исходного кода\Диалоговые окна</Filter>
+    </ClCompile>
+    <ClCompile Include="InputLineSegBox.cpp">
+      <Filter>Файлы исходного кода\Диалоговые окна</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSizeRectBox.cpp">
+      <Filter>Файлы исходного кода\Диалоговые окна</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Файлы ресурсов</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
