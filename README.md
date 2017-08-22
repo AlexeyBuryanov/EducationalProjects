@@ -54,7 +54,7 @@ Projects written for educational purposes.
     <i>ENG</i>: Practice of use DataGridView and DataBinding. XML serialization.
 * **[TableFunctions](WindowsForms/TableFunctions/)** <br/>
     <i>RUS</i>: Таблица тригонометрических функций. Используется элемент управления DataGrid. <br/>
-    <i>ENG</i>: Table of trigonometric functions. The DateGrid control is used.
+    <i>ENG</i>: Table of trigonometric functions. The DataGrid control is used.
     
 ## Windows Presentation Foundation
 * **[Layouts](WPF/Layouts/)** <br/>
