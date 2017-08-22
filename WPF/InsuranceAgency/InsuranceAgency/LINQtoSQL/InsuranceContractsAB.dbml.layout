@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.625" name="InsuranceContractsAB">
+  <DataContextMoniker Name="/InsuranceContractsABDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1ba8c523-be95-42b0-8c22-660233c07e4b" absoluteBounds="0.75, 6.5, 2, 1.9631982421875014">
+      <DataClassMoniker Name="/InsuranceContractsABDataContext/Agents" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2234801c-21f2-4650-993b-a71dd143e996" absoluteBounds="0.765, 6.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff48aefe-24c5-4585-81a5-21ced09b6be5" absoluteBounds="3.5, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/InsuranceContractsABDataContext/CanceledContracts" />
+      <nestedChildShapes>
+        <elementListCompartment Id="acf7bef4-8c2b-453f-a74b-d21348d540c5" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c343ba1-e61b-45a6-8621-7e393a563b77" absoluteBounds="0.75, 9.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/InsuranceContractsABDataContext/Clientage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50132be5-1433-4f5e-9b0a-d0dc2821a902" absoluteBounds="0.765, 9.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="931ed091-f176-4527-9207-07e34bd9d6a4" absoluteBounds="3.5, 3.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/InsuranceContractsABDataContext/Contracts" />
+      <nestedChildShapes>
+        <elementListCompartment Id="beebf982-c5e4-4eef-b9ef-bd6981223f9b" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7ab03225-c30d-486b-b277-aad13d8374ba" absoluteBounds="3.75, 7.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/InsuranceContractsABDataContext/ContractsLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="24e82444-8183-439a-b4b3-1ea05b409c04" absoluteBounds="3.765, 7.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="30a6a1f8-a601-4083-9a26-584b5b2887c7" absoluteBounds="0.75, 4.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/InsuranceContractsABDataContext/TypesInsurance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0934aba5-6cec-4527-af77-c0eda20adbae" absoluteBounds="0.765, 4.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.5); (3.125 : 6.125); (3.125 : 1.82774983723958); (3.5 : 1.82774983723958)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/InsuranceContractsABDataContext/Agents/Agents_CanceledContracts" />
+      <nodes>
+        <classShapeMoniker Id="1ba8c523-be95-42b0-8c22-660233c07e4b" />
+        <classShapeMoniker Id="ff48aefe-24c5-4585-81a5-21ced09b6be5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.31307592307692); (3.3125 : 8.75057592307692); (3.3125 : 2.39787675585937); (3.5 : 2.39787675585937)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/InsuranceContractsABDataContext/Clientage/Clientage_CanceledContracts" />
+      <nodes>
+        <classShapeMoniker Id="6c343ba1-e61b-45a6-8621-7e393a563b77" />
+        <classShapeMoniker Id="ff48aefe-24c5-4585-81a5-21ced09b6be5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.8125025); (3.22916666666667 : 6.8125025 : JumpStart); (3.39583333333333 : 6.8125025 : JumpEnd); (3.59375 : 6.8125025); (3.59375 : 5.8381982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/InsuranceContractsABDataContext/Agents/Agents_Contracts" />
+      <nodes>
+        <classShapeMoniker Id="1ba8c523-be95-42b0-8c22-660233c07e4b" />
+        <classShapeMoniker Id="931ed091-f176-4527-9207-07e34bd9d6a4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 10.390540298778); (3.5624975 : 10.390540298778); (3.5624975 : 5.8381982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/InsuranceContractsABDataContext/Clientage/Clientage_Contracts" />
+      <nodes>
+        <classShapeMoniker Id="6c343ba1-e61b-45a6-8621-7e393a563b77" />
+        <classShapeMoniker Id="931ed091-f176-4527-9207-07e34bd9d6a4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4.125); (1.75 : 1.25762241861979); (3.5 : 1.25762241861979)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/InsuranceContractsABDataContext/TypesInsurance/TypesInsurance_CanceledContracts" />
+      <nodes>
+        <classShapeMoniker Id="30a6a1f8-a601-4083-9a26-584b5b2887c7" />
+        <classShapeMoniker Id="ff48aefe-24c5-4585-81a5-21ced09b6be5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.81814697265625); (3.04166666666667 : 4.81814697265625 : JumpStart); (3.20833333333333 : 4.81814697265625 : JumpEnd); (3.22916666666667 : 4.81814697265625 : JumpStart); (3.39583333333333 : 4.81814697265625 : JumpEnd); (3.5 : 4.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/InsuranceContractsABDataContext/TypesInsurance/TypesInsurance_Contracts" />
+      <nodes>
+        <classShapeMoniker Id="30a6a1f8-a601-4083-9a26-584b5b2887c7" />
+        <classShapeMoniker Id="931ed091-f176-4527-9207-07e34bd9d6a4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

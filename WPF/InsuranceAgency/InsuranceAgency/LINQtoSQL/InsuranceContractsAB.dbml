@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="InsuranceContractsAB" Class="InsuranceContractsABDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-Q5N2AT2\SQLEXPRESS;Initial Catalog=InsuranceContractsAB;Integrated Security=True;Encrypt=False;TrustServerCertificate=True" SettingsObjectName="InsuranceAgency.Properties.Settings" SettingsPropertyName="InsuranceContractsABConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Agents" Member="Agents">
+    <Type Name="Agents">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ASecondName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="AFirstName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="AMiddleName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="AReward" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="APhoto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Agents_CanceledContracts" Member="CanceledContracts" ThisKey="Id" OtherKey="IdAgent" Type="CanceledContracts" />
+      <Association Name="Agents_Contracts" Member="Contracts" ThisKey="Id" OtherKey="IdAgent" Type="Contracts" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CanceledContracts" Member="CanceledContracts">
+    <Type Name="CanceledContracts">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdClient" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdAgent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdTypeInsurance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SumInsurance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DateConclusion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="TerminationSign" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Association Name="Agents_CanceledContracts" Member="Agents" ThisKey="IdAgent" OtherKey="Id" Type="Agents" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Clientage_CanceledContracts" Member="Clientage" ThisKey="IdClient" OtherKey="Id" Type="Clientage" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="TypesInsurance_CanceledContracts" Member="TypesInsurance" ThisKey="IdTypeInsurance" OtherKey="Id" Type="TypesInsurance" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Clientage" Member="Clientage">
+    <Type Name="Clientage" Id="ID1">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CSecondName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CFirstName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CMiddleName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CPassport" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CDiscount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CPhoto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Clientage_CanceledContracts" Member="CanceledContracts" ThisKey="Id" OtherKey="IdClient" Type="CanceledContracts" />
+      <Association Name="Clientage_Contracts" Member="Contracts" ThisKey="Id" OtherKey="IdClient" Type="Contracts" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Contracts" Member="Contracts">
+    <Type Name="Contracts">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdClient" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdAgent" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdTypeInsurance" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SumInsurance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DateConclusion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Agents_Contracts" Member="Agents" ThisKey="IdAgent" OtherKey="Id" Type="Agents" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Clientage_Contracts" Member="Clientage" ThisKey="IdClient" OtherKey="Id" Type="Clientage" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="TypesInsurance_Contracts" Member="TypesInsurance" ThisKey="IdTypeInsurance" OtherKey="Id" Type="TypesInsurance" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContractsLog" Member="ContractsLog">
+    <Type Name="ContractsLog">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Msg" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="DateOperation" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="KindOperation" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TypesInsurance" Member="TypesInsurance">
+    <Type Name="TypesInsurance">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Tariff" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="TypesInsurance_CanceledContracts" Member="CanceledContracts" ThisKey="Id" OtherKey="IdTypeInsurance" Type="CanceledContracts" />
+      <Association Name="TypesInsurance_Contracts" Member="Contracts" ThisKey="Id" OtherKey="IdTypeInsurance" Type="Contracts" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_Request01" Method="sp_Request01">
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.sp_Request02" Method="sp_Request02">
+    <ElementType Name="sp_Request02Result">
+      <Column Name="DateConclusion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SumInsurance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Tariff" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ClientNames" Type="System.String" DbType="NVarChar(66)" CanBeNull="true" />
+      <Column Name="CPassport" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CDiscount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CPhoto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="AgentNames" Type="System.String" DbType="NVarChar(66)" CanBeNull="true" />
+      <Column Name="AReward" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="APhoto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Request03" Method="sp_Request03">
+    <ElementType Name="sp_Request03Result">
+      <Column Name="CSecondName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CFirstName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CMiddleName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CPassport" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CDiscount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CPhoto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="SumInsurance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DateConclusion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Request04" Method="sp_Request04">
+    <Parameter Name="secondName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_Request04Result">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CSecondName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CFirstName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CMiddleName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="CPassport" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CDiscount" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CPhoto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Request05" Method="sp_Request05">
+    <Parameter Name="dateFrom" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="dateTo" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="sp_Request05Result">
+      <Column Name="ClientNames" Type="System.String" DbType="NVarChar(66)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="SumInsurance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DateConclusion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="AgentNames" Type="System.String" DbType="NVarChar(66)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Request06" Method="sp_Request06">
+    <ElementType Name="sp_Request06Result">
+      <Column Name="DateConclusion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ASecondName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="AFirstName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="AMiddleName" Type="System.String" DbType="NVarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="SumInsurance" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Commission" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Request07" Method="sp_Request07">
+    <ElementType Name="sp_Request07Result">
+      <Column Name="MaxSumInsurance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="MinSumInsurance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="CountSums" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Request08" Method="sp_Request08">
+    <ElementType Name="sp_Request08Result">
+      <Column Name="AvgSumInsurance" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Request09" Method="sp_Request09">
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.sp_Request10" Method="sp_Request10">
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.sp_Request11" Method="sp_Request11">
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.sp_Request12" Method="sp_Request12">
+    <ElementType IdRef="ID1" />
+  </Function>
+</Database>

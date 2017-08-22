@@ -1,0 +1,15 @@
+﻿<!--==========================================================
+**
+** Словарь ресурсов для различных провайдеров данных
+** 
+** Copyright (c) Alexey Bur'yanov, 2017
+** <OWNER>Alexey Bur'yanov</OWNER>
+** 
+===========================================================-->
+    
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    
+</ResourceDictionary>
