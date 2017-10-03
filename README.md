@@ -1,6 +1,10 @@
 # Educational Projects
 Projects written for educational purposes.
 
+[license-image]: https://img.shields.io/npm/l/normalize.css.svg?style=flat
+[license-url]: LICENSE.md
+[![license][license-image]][license-url]
+
 ## Win32 API
 * **[House](Win32API/House/)** <br/>
     <i>RUS</i>: Просто дом. Нарисованный средствами WinAPI. <br/>
