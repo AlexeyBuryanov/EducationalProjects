@@ -1,6 +1,9 @@
+<a href="https://github.com/AlexeyBuryanov/EducationalProjects/"><img
+  src="projects.jpg" alt="Repository Icon"
+  width="80" height="80" align="right"></a>
 # Educational Projects
 Projects written for educational purposes.
-
+  
 [license-image]: https://img.shields.io/npm/l/normalize.css.svg?style=flat
 [license-url]: LICENSE.md
 [![license][license-image]][license-url]
