@@ -9,9 +9,7 @@ Projects written for educational purposes and not only.
 [![license][license-image]][license-url]
 
 ## Win32 API
-* **[House](Win32API/House/)** <br/>
-    <i>RUS</i>: Просто дом. Нарисованный средствами WinAPI. <br/>
-    <i>ENG</i>: Just a house. Drawn by means WinAPI.
+* **[House](Win32API/House/)**
 * **[Lists](Win32API/Lists/)** <br/>
     <i>RUS</i>: Ознакомление работы со списками (ListBox) в WinAPI. <br/>
     <i>ENG</i>: Introduction to work with ListBox in WinAPI.
