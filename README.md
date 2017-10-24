@@ -2,7 +2,7 @@
   src="projects.jpg" alt="Repository Icon"
   width="80" height="80" align="right"></a>
 # Educational Projects
-Projects written for educational purposes.
+Projects written for educational purposes and not only.
   
 [license-image]: https://img.shields.io/npm/l/normalize.css.svg?style=flat
 [license-url]: LICENSE.md
