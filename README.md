@@ -9,40 +9,7 @@ Projects written for educational purposes and not only.
 [![license][license-image]][license-url]
 
 ## Win32 API
-* **[House](Win32API/House/)**
-* **[Lists](Win32API/Lists/)** <br/>
-    <i>RUS</i>: Ознакомление работы со списками (ListBox) в WinAPI. <br/>
-    <i>ENG</i>: Introduction to work with ListBox in WinAPI.
-* **[MenuComboFigures](Win32API/MenuComboFigures/)** <br/>
-    <i>RUS</i>: Работа с такими элементами, как Menu, ComboBox и рисование простейших фигур средствами WinAPI. <br/>
-    <i>ENG</i>: Work with Menu, ComboBox and painting simple figures through WinAPI graphics.
-* **[Patients](Win32API/Patients/)** <br/>
-    <i>RUS</i>: Приложение демонстрирует работу с двоичным потоком ввода-вывода и списком ListBox. <br/>
-    <i>ENG</i>: Application demonstrates work with binary stream input/output and list ListBox.
-* **[Pizza](Win32API/Pizza/)** <br/>
-    <i>RUS</i>: Работа со стандартными элементами управления Win32API. <br/>
-    <i>ENG</i>: Work with standard controls Win32API.
-* **[PriceList](Win32API/PriceList/)** <br/>
-    <i>RUS</i>: Многооконное приложение демонстрирующее работу с двоичным потоком ввода-вывода, элементом управления ListBox и контейнерами list, vector из STL. <br/>
-    <i>ENG</i>: Multi-window application demonstrates work with binary stream input/output, element controls ListBox and containers: list, vector of STL.
-* **[SimpleCalculator](Win32API/SimpleCalculator/)** <br/>
-    <i>RUS</i>: Простой калькулятор созданный с помощью технологии Windows API. <br/>
-    <i>ENG</i>: Simple calculator written through technology Windows API.
-* **[TicTacToe](Win32API/TicTacToe/)** <br/>
-    <i>RUS</i>: Простые крестики-нолики. <br/>
-    <i>ENG</i>: Simple tic-tac-toe.
-* **[Variants](Win32API/Variants/)** <br/>
-    <i>RUS</i>: Варианты 11, 12, 13, 14, 15 из учебника Павловской по C#. <br/>
-    <i>ENG</i>: Variants 11, 12, 13, 14, 15 from textbook Pavlovskaya C#.
-* **[Variants19-20](Win32API/Variants19-20/)** <br/>
-    <i>RUS</i>: Варианты 19, 20 из учебника Павловской по C#. <br/>
-    <i>ENG</i>: Variants 19, 20 from textbook Pavlovskaya C#.
-* **[ViewWeather](Win32API/ViewWeather/)** <br/>
-    <i>RUS</i>: Приложение считывает метеорологические данные из файлов формата *.txt, .*csv через запятую. Работа с элементом управления ListView и стандартными диалогами. <br/>
-    <i>ENG</i>: Application reading meteorological data from files formats *.txt, .*csv separated by a comma. Work with control ListView and standard dialogs.
-* **[Worker](Win32API/Worker/)** <br/>
-    <i>RUS</i>: Демонстрация работы с простыми элементами управления Win32API. <br/>
-    <i>ENG</i>: Demonstration work with simple controls Win32API.
+**[House](Win32API/House/)**, **[Lists](Win32API/Lists/)**, **[MenuComboFigures](Win32API/MenuComboFigures/)**, **[Patients](Win32API/Patients/)**, **[Pizza](Win32API/Pizza/)**, **[PriceList](Win32API/PriceList/)**, **[SimpleCalculator](Win32API/SimpleCalculator/)**, **[TicTacToe](Win32API/TicTacToe/)**, **[Variants](Win32API/Variants/)**, **[Variants19-20](Win32API/Variants19-20/)**, **[ViewWeather](Win32API/ViewWeather/)**, **[Worker](Win32API/Worker/)**.
     
 ## Windows Forms
 * **[HanoiTower](WindowsForms/HanoiTower/)** <br/>
