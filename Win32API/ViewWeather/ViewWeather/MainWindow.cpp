@@ -100,24 +100,24 @@ BOOL OnCreate(HWND hwnd, LPCREATESTRUCT lpCreateStruct)
 	lvCol.cx   = (rect.right - rect.left - 20) / 5;
 
 	lvCol.iSubItem = 0;
-	lvCol.pszText  = _T("Ãîðîä");
+	lvCol.pszText  = _T("Город");
 	ListView_InsertColumn(hLstWeather, 0, &lvCol);
 
 	// Теперь добавляем подэлементы
 	lvCol.iSubItem = 1;
-	lvCol.pszText  = _T("Íàïðàâëåíèå âåòðà");
+	lvCol.pszText  = _T("Направление ветра");
 	ListView_InsertColumn(hLstWeather, 1, &lvCol);
 
 	lvCol.iSubItem = 2;
-	lvCol.pszText  = _T("Ñêîðîñòü âåòðà, ì/ñ");
+	lvCol.pszText  = _T("Скорость ветра, м/с");
 	ListView_InsertColumn(hLstWeather, 2, &lvCol);
 
 	lvCol.iSubItem = 3;
-	lvCol.pszText  = _T("Ìàêñ. äíåâ. òåìïåð.");
+	lvCol.pszText  = _T("Макс. днев. темпер.");
 	ListView_InsertColumn(hLstWeather, 3, &lvCol);
 
 	lvCol.iSubItem = 4;
-	lvCol.pszText  = _T("Ìèí. íî÷. òåìïåð.");
+	lvCol.pszText  = _T("Мин. ноч. темпер.");
 	ListView_InsertColumn(hLstWeather, 4, &lvCol);
 
 	ListView_SetExtendedListViewStyle(hLstWeather,
@@ -125,7 +125,7 @@ BOOL OnCreate(HWND hwnd, LPCREATESTRUCT lpCreateStruct)
 	#pragma endregion
 	
 	// Загрузка данных из файла
-	weather = WeatherLoad(_T("Ìåòåîäàííûå.txt"));
+	weather = WeatherLoad(_T("Метеоданные.txt"));
 	weather.LoadFromFile();
 
 	// Вывод вектора студентов в элемент ListView
