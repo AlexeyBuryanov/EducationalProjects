@@ -64,7 +64,7 @@ BOOL OnCreate(HWND hwnd, LPCREATESTRUCT lpCreateStruct)
 	RECT rect;
 	GetClientRect(hwnd, &rect);
 
-	#pragma region Ñîçäàíèå ìåíþ
+	#pragma region Создание меню
 	hMainMenu = CreateMenu();
 	hFileMenu = CreatePopupMenu();
 	hViewMenu = CreatePopupMenu();
