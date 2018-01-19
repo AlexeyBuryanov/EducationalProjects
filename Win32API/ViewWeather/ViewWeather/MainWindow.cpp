@@ -2,23 +2,23 @@
 #include "MainWindow.h"
 #include "WeatherInfo.h"
 #include "WeatherLoad.h"
+ 
+// ГЏГҐГ°ГҐГ¬ГҐГ­Г­Г»ГҐ ГЁ ГґГіГ­ГЄГ¶ГЁГЁ Г¤Г«Гї ГЈГ«Г ГўГ­Г®ГЈГ® Г®ГЄГ­Г  ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї.
+static HDC hdc; // Г•ГЅГ­Г¤Г« ГЄГ®Г­ГІГҐГЄГ±ГІГ  ГіГ±ГІГ°Г®Г©Г±ГІГўГ                          
 
-// Переменные и функции для главного окна приложения
-static HDC hdc; // Хэндл контекста устройства                         
-
-// Меню окна и подменю "Файл", "Вид"
+// ГЊГҐГ­Гѕ Г®ГЄГ­Г  ГЁ ГЇГ®Г¤Г¬ГҐГ­Гѕ "Г”Г Г©Г«", "Г‚ГЁГ¤"
 HMENU hMainMenu, hFileMenu, hViewMenu;
 
-// Высота строки меню в пикселях - для перестроения окна
+// Г‚Г»Г±Г®ГІГ  Г±ГІГ°Г®ГЄГЁ Г¬ГҐГ­Гѕ Гў ГЇГЁГЄГ±ГҐГ«ГїГµ - Г¤Г«Гї ГЇГҐГ°ГҐГ±ГІГ°Г®ГҐГ­ГЁГї Г®ГЄГ­Г 
 static INT32 nMenuHeight;   
 
-// Элемент ListView
+// ГќГ«ГҐГ¬ГҐГ­ГІ ListView
 HWND hLstWeather;
 
-// Вектор данных для обработки - вектор объектов класса Student
+// Г‚ГҐГЄГІГ®Г° Г¤Г Г­Г­Г»Гµ Г¤Г«Гї Г®ГЎГ°Г ГЎГ®ГІГЄГЁ - ГўГҐГЄГІГ®Г° Г®ГЎГєГҐГЄГІГ®Гў ГЄГ«Г Г±Г±Г  Student
 WeatherLoad weather;
 
-// Стандартный диалог открытия файла
+// Г‘ГІГ Г­Г¤Г Г°ГІГ­Г»Г© Г¤ГЁГ Г«Г®ГЈ Г®ГІГЄГ°Г»ГІГЁГї ГґГ Г©Г«Г 
 OPENFILENAME ofn;
 
 LOGFONT lf;
@@ -31,16 +31,16 @@ CHOOSECOLOR ccol;
 COLORREF clf;
 COLORREF clfusers[16];
 
-// Оконная функция - обработка сообщений, получаемых окном
-// hwnd	  - дескриптор окна
-// msg	  - числовой код сообщения
-// wParam - первая часть параметров сообщения
-// lParam - вторая часть параметров сообщения
+// ГЋГЄГ®Г­Г­Г Гї ГґГіГ­ГЄГ¶ГЁГї - Г®ГЎГ°Г ГЎГ®ГІГЄГ  Г±Г®Г®ГЎГ№ГҐГ­ГЁГ©, ГЇГ®Г«ГіГ·Г ГҐГ¬Г»Гµ Г®ГЄГ­Г®Г¬
+// hwnd	  - Г¤ГҐГ±ГЄГ°ГЁГЇГІГ®Г° Г®ГЄГ­Г 
+// msg	  - Г·ГЁГ±Г«Г®ГўГ®Г© ГЄГ®Г¤ Г±Г®Г®ГЎГ№ГҐГ­ГЁГї
+// wParam - ГЇГҐГ°ГўГ Гї Г·Г Г±ГІГј ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў Г±Г®Г®ГЎГ№ГҐГ­ГЁГї
+// lParam - ГўГІГ®Г°Г Гї Г·Г Г±ГІГј ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў Г±Г®Г®ГЎГ№ГҐГ­ГЁГї
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
 	switch (msg) {
-		HANDLE_MSG(hwnd, WM_CREATE, OnCreate);  // создание окна
-		HANDLE_MSG(hwnd, WM_SIZE, OnSize);      // Изменение размера экрана
+		HANDLE_MSG(hwnd, WM_CREATE, OnCreate);  // Г±Г®Г§Г¤Г Г­ГЁГҐ Г®ГЄГ­Г 
+		HANDLE_MSG(hwnd, WM_SIZE, OnSize);      // Г€Г§Г¬ГҐГ­ГҐГ­ГЁГҐ Г°Г Г§Г¬ГҐГ°Г  ГЅГЄГ°Г Г­Г 
 		HANDLE_MSG(hwnd, WM_PAINT, OnPaint);
 		HANDLE_MSG(hwnd, WM_CLOSE, OnClose);
 		HANDLE_MSG(hwnd, WM_DESTROY, OnDestroy);
@@ -48,7 +48,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		HANDLE_MSG(hwnd, WM_COMMAND, OnCommand);
 		HANDLE_MSG(hwnd, WM_CTLCOLORSTATIC, OnCtlColorStatic);
 	
-		// Обработка сообщений для которых не предусмотрена обработка в нашем окне
+		// ГЋГЎГ°Г ГЎГ®ГІГЄГ  Г±Г®Г®ГЎГ№ГҐГ­ГЁГ© Г¤Г«Гї ГЄГ®ГІГ®Г°Г»Гµ Г­ГҐ ГЇГ°ГҐГ¤ГіГ±Г¬Г®ГІГ°ГҐГ­Г  Г®ГЎГ°Г ГЎГ®ГІГЄГ  Гў Г­Г ГёГҐГ¬ Г®ГЄГ­ГҐ
 		default:
 		return DefWindowProc(hwnd, msg, wParam, lParam);
 	} // switch
@@ -57,94 +57,94 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 } // WndProc
 
 
-// Обработчик сообщения WM_CREATE - обработчик события "При создании" 
-// нашего окна
+// ГЋГЎГ°Г ГЎГ®ГІГ·ГЁГЄ Г±Г®Г®ГЎГ№ГҐГ­ГЁГї WM_CREATE - Г®ГЎГ°Г ГЎГ®ГІГ·ГЁГЄ Г±Г®ГЎГ»ГІГЁГї "ГЏГ°ГЁ Г±Г®Г§Г¤Г Г­ГЁГЁ" 
+// Г­Г ГёГҐГЈГ® Г®ГЄГ­Г 
 BOOL OnCreate(HWND hwnd, LPCREATESTRUCT lpCreateStruct)
 {
 	RECT rect;
 	GetClientRect(hwnd, &rect);
 
-	#pragma region Создание меню
+	#pragma region Г‘Г®Г§Г¤Г Г­ГЁГҐ Г¬ГҐГ­Гѕ
 	hMainMenu = CreateMenu();
 	hFileMenu = CreatePopupMenu();
 	hViewMenu = CreatePopupMenu();
 
-	AppendMenu(hMainMenu, MF_STRING | MF_POPUP, (UINT_PTR)hFileMenu, _T("&Файл"));
-	AppendMenu(hFileMenu, MF_STRING, IDC_OPEN, _T("&Открыть..."));
+	AppendMenu(hMainMenu, MF_STRING | MF_POPUP, (UINT_PTR)hFileMenu, _T("&Г”Г Г©Г«"));
+	AppendMenu(hFileMenu, MF_STRING, IDC_OPEN, _T("&ГЋГІГЄГ°Г»ГІГј..."));
 	AppendMenu(hFileMenu, MF_SEPARATOR, NULL, _T(""));
-	AppendMenu(hFileMenu, MF_STRING, IDC_QUIT, _T("Вы&ход"));
+	AppendMenu(hFileMenu, MF_STRING, IDC_QUIT, _T("Г‚Г»&ГµГ®Г¤"));
 
-	AppendMenu(hMainMenu, MF_STRING | MF_POPUP, (UINT_PTR)hViewMenu, _T("&Вид"));
-	AppendMenu(hViewMenu, MF_STRING, IDC_FONT, _T("Шр&ифт текста..."));
-	AppendMenu(hViewMenu, MF_STRING, IDC_COLOR, _T("Ц&вет фона..."));
+	AppendMenu(hMainMenu, MF_STRING | MF_POPUP, (UINT_PTR)hViewMenu, _T("&Г‚ГЁГ¤"));
+	AppendMenu(hViewMenu, MF_STRING, IDC_FONT, _T("ГГ°&ГЁГґГІ ГІГҐГЄГ±ГІГ ..."));
+	AppendMenu(hViewMenu, MF_STRING, IDC_COLOR, _T("Г–&ГўГҐГІ ГґГ®Г­Г ..."));
 	SetMenu(hwnd, hMainMenu);
 
-	// Получить высоту строки меню в пикселах
+	// ГЏГ®Г«ГіГ·ГЁГІГј ГўГ»Г±Г®ГІГі Г±ГІГ°Г®ГЄГЁ Г¬ГҐГ­Гѕ Гў ГЇГЁГЄГ±ГҐГ«Г Гµ
 	nMenuHeight = GetSystemMetrics(SM_CYMENU);
 	#pragma endregion
 
-	#pragma region Создание элемента ListView
+	#pragma region Г‘Г®Г§Г¤Г Г­ГЁГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ  ListView
 	hLstWeather = CreateWindowEx(0, WC_LISTVIEW, NULL,
 		WS_VISIBLE | WS_CHILD | WS_BORDER | LVS_REPORT | LVS_ALIGNLEFT,
 		rect.left + 10, rect.top + 10, rect.right - 20, rect.bottom - nMenuHeight, 
 		hwnd, (HMENU)IDC_LISTVIEW, lpCreateStruct->hInstance, NULL);
 	// SendMessage(hLstStudents, WM_SETFONT, WPARAM(hFontList), NULL);
 
-	// Добавление столбцов
+	// Г„Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ Г±ГІГ®Г«ГЎГ¶Г®Гў
 	LV_COLUMN lvCol;
 	ZeroMemory(&lvCol, sizeof(LV_COLUMN));
 
-	// Добавление 0-го столбца - Фамилия и инициалы
+	// Г„Г®ГЎГ ГўГ«ГҐГ­ГЁГҐ 0-ГЈГ® Г±ГІГ®Г«ГЎГ¶Г  - Г”Г Г¬ГЁГ«ГЁГї ГЁ ГЁГ­ГЁГ¶ГЁГ Г«Г»
 	lvCol.mask = LVCF_FMT | LVCF_WIDTH | LVCF_TEXT | LVCF_SUBITEM;
 	lvCol.fmt  = LVCFMT_LEFT;
 	lvCol.cx   = (rect.right - rect.left - 20) / 5;
 
 	lvCol.iSubItem = 0;
-	lvCol.pszText  = _T("Город");
+	lvCol.pszText  = _T("ГѓГ®Г°Г®Г¤");
 	ListView_InsertColumn(hLstWeather, 0, &lvCol);
 
-	// Теперь добавляем подэлементы
+	// Г’ГҐГЇГҐГ°Гј Г¤Г®ГЎГ ГўГ«ГїГҐГ¬ ГЇГ®Г¤ГЅГ«ГҐГ¬ГҐГ­ГІГ»
 	lvCol.iSubItem = 1;
-	lvCol.pszText  = _T("Направление ветра");
+	lvCol.pszText  = _T("ГЌГ ГЇГ°Г ГўГ«ГҐГ­ГЁГҐ ГўГҐГІГ°Г ");
 	ListView_InsertColumn(hLstWeather, 1, &lvCol);
 
 	lvCol.iSubItem = 2;
-	lvCol.pszText  = _T("Скорость ветра, м/с");
+	lvCol.pszText  = _T("Г‘ГЄГ®Г°Г®Г±ГІГј ГўГҐГІГ°Г , Г¬/Г±");
 	ListView_InsertColumn(hLstWeather, 2, &lvCol);
 
 	lvCol.iSubItem = 3;
-	lvCol.pszText  = _T("Макс. днев. темпер.");
+	lvCol.pszText  = _T("ГЊГ ГЄГ±. Г¤Г­ГҐГў. ГІГҐГ¬ГЇГҐГ°.");
 	ListView_InsertColumn(hLstWeather, 3, &lvCol);
 
 	lvCol.iSubItem = 4;
-	lvCol.pszText  = _T("Мин. ноч. темпер.");
+	lvCol.pszText  = _T("ГЊГЁГ­. Г­Г®Г·. ГІГҐГ¬ГЇГҐГ°.");
 	ListView_InsertColumn(hLstWeather, 4, &lvCol);
 
 	ListView_SetExtendedListViewStyle(hLstWeather,
 		ListView_GetExtendedListViewStyle(hLstWeather) | LVS_EX_FULLROWSELECT);
 	#pragma endregion
 	
-	// Загрузка данных из файла
-	weather = WeatherLoad(_T("Метеоданные.txt"));
+	// Г‡Г ГЈГ°ГіГ§ГЄГ  Г¤Г Г­Г­Г»Гµ ГЁГ§ ГґГ Г©Г«Г 
+	weather = WeatherLoad(_T("ГЊГҐГІГҐГ®Г¤Г Г­Г­Г»ГҐ.txt"));
 	weather.LoadFromFile();
 
-	// Вывод вектора студентов в элемент ListView
+	// Г‚Г»ГўГ®Г¤ ГўГҐГЄГІГ®Г°Г  Г±ГІГіГ¤ГҐГ­ГІГ®Гў Гў ГЅГ«ГҐГ¬ГҐГ­ГІ ListView
 	weather.ListView(hLstWeather);
 
-	#pragma region Создание диалога открытия файла
+	#pragma region Г‘Г®Г§Г¤Г Г­ГЁГҐ Г¤ГЁГ Г«Г®ГЈГ  Г®ГІГЄГ°Г»ГІГЁГї ГґГ Г©Г«Г 
 	static TCHAR fileName[256];
 	ZeroMemory(&ofn, sizeof(OPENFILENAME));
 	ofn.lStructSize = sizeof(OPENFILENAME);
 	ofn.hwndOwner = hwnd;
 	ofn.lpstrFile = fileName;
 	ofn.nMaxFile = sizeof(fileName);
-	ofn.lpstrFilter = _T("Текстовые файлы (*.txt)\0*.txt\0CSV-файлы (*.csv)\0*.csv\0Все файлы (*.*)\0*.*\0");
+	ofn.lpstrFilter = _T("Г’ГҐГЄГ±ГІГ®ГўГ»ГҐ ГґГ Г©Г«Г» (*.txt)\0*.txt\0CSV-ГґГ Г©Г«Г» (*.csv)\0*.csv\0Г‚Г±ГҐ ГґГ Г©Г«Г» (*.*)\0*.*\0");
 	ofn.nFilterIndex = 1;
-	ofn.lpstrInitialDir = _T(".");  // текущий каталог/текущая папка
+	ofn.lpstrInitialDir = _T(".");  // ГІГҐГЄГіГ№ГЁГ© ГЄГ ГІГ Г«Г®ГЈ/ГІГҐГЄГіГ№Г Гї ГЇГ ГЇГЄГ 
 	ofn.lpstrDefExt = _T("txt");
 	#pragma endregion
 
-	#pragma region Создание диалога выбора шрифта
+	#pragma region Г‘Г®Г§Г¤Г Г­ГЁГҐ Г¤ГЁГ Г«Г®ГЈГ  ГўГ»ГЎГ®Г°Г  ГёГ°ГЁГґГІГ 
 	colfont = RGB(0, 0, 0);
 	lf.lfHeight = 13;
 	lf.lfWidth = 13;
@@ -160,7 +160,7 @@ BOOL OnCreate(HWND hwnd, LPCREATESTRUCT lpCreateStruct)
 	cfont.Flags = CF_SCREENFONTS | CF_EFFECTS | CF_INITTOLOGFONTSTRUCT;
 	#pragma endregion
 
-	#pragma region Создание диалога выбора цвета
+	#pragma region Г‘Г®Г§Г¤Г Г­ГЁГҐ Г¤ГЁГ Г«Г®ГЈГ  ГўГ»ГЎГ®Г°Г  Г¶ГўГҐГІГ 
 	ccol.lStructSize = sizeof(CHOOSECOLOR);
 	ccol.Flags = CC_RGBINIT;
 	ccol.lpCustColors = clfusers;
@@ -171,34 +171,34 @@ BOOL OnCreate(HWND hwnd, LPCREATESTRUCT lpCreateStruct)
 } // OnCreate
 
 
-// Обработчик сообщения WM_SIZE - обработчик события "При изменении размера" 
-// нашего окна
+// ГЋГЎГ°Г ГЎГ®ГІГ·ГЁГЄ Г±Г®Г®ГЎГ№ГҐГ­ГЁГї WM_SIZE - Г®ГЎГ°Г ГЎГ®ГІГ·ГЁГЄ Г±Г®ГЎГ»ГІГЁГї "ГЏГ°ГЁ ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГЁ Г°Г Г§Г¬ГҐГ°Г " 
+// Г­Г ГёГҐГЈГ® Г®ГЄГ­Г 
 void OnSize(HWND hwnd, UINT state, int cx, int cy)
 {
-	RECT rect;       // Прямоугольник - для хранения координат рабочей области окна 
-	INT32 nWidth;    // Ширина столбца элемента ListView
+	RECT rect;       // ГЏГ°ГїГ¬Г®ГіГЈГ®Г«ГјГ­ГЁГЄ - Г¤Г«Гї ГµГ°Г Г­ГҐГ­ГЁГї ГЄГ®Г®Г°Г¤ГЁГ­Г ГІ Г°Г ГЎГ®Г·ГҐГ© Г®ГЎГ«Г Г±ГІГЁ Г®ГЄГ­Г  
+	INT32 nWidth;    // ГГЁГ°ГЁГ­Г  Г±ГІГ®Г«ГЎГ¶Г  ГЅГ«ГҐГ¬ГҐГ­ГІГ  ListView
 
-	GetClientRect(hwnd, &rect);         // Задать область окна для перерисовки
+	GetClientRect(hwnd, &rect);         // Г‡Г Г¤Г ГІГј Г®ГЎГ«Г Г±ГІГј Г®ГЄГ­Г  Г¤Г«Гї ГЇГҐГ°ГҐГ°ГЁГ±Г®ГўГЄГЁ
 
-	// Новый размер ListView
+	// ГЌГ®ГўГ»Г© Г°Г Г§Г¬ГҐГ° ListView
 	MoveWindow(hLstWeather, 10, 10, rect.right - 20, rect.bottom - nMenuHeight - 10, TRUE);
 
-	// Послать сообщения ListView для установки ширины столбцов
+	// ГЏГ®Г±Г«Г ГІГј Г±Г®Г®ГЎГ№ГҐГ­ГЁГї ListView Г¤Г«Гї ГіГ±ГІГ Г­Г®ГўГЄГЁ ГёГЁГ°ГЁГ­Г» Г±ГІГ®Г«ГЎГ¶Г®Гў
 	nWidth = (rect.right - 20) / 5;
 	for (size_t i = 0; i < 5; i++)
 		ListView_SetColumnWidth(hLstWeather, i, nWidth);
 
-	InvalidateRect(hwnd, &rect, TRUE);  // Объявить область недействительной => формируется WM_PAINT
+	InvalidateRect(hwnd, &rect, TRUE);  // ГЋГЎГєГїГўГЁГІГј Г®ГЎГ«Г Г±ГІГј Г­ГҐГ¤ГҐГ©Г±ГІГўГЁГІГҐГ«ГјГ­Г®Г© => ГґГ®Г°Г¬ГЁГ°ГіГҐГІГ±Гї WM_PAINT
 } // OnSize
 
 
-// Обработчик сообщения WM_PAINT - обработчик события "При отрисовке" 
+// ГЋГЎГ°Г ГЎГ®ГІГ·ГЁГЄ Г±Г®Г®ГЎГ№ГҐГ­ГЁГї WM_PAINT - Г®ГЎГ°Г ГЎГ®ГІГ·ГЁГЄ Г±Г®ГЎГ»ГІГЁГї "ГЏГ°ГЁ Г®ГІГ°ГЁГ±Г®ГўГЄГҐ" 
 void OnPaint(HWND hwnd)
 {
-	PAINTSTRUCT ps;  // Параметры контекста устройства
-	RECT rect;       // Прямоугольник - для хранения координат рабочей области окна 
+	PAINTSTRUCT ps;  // ГЏГ Г°Г Г¬ГҐГІГ°Г» ГЄГ®Г­ГІГҐГЄГ±ГІГ  ГіГ±ГІГ°Г®Г©Г±ГІГўГ 
+	RECT rect;       // ГЏГ°ГїГ¬Г®ГіГЈГ®Г«ГјГ­ГЁГЄ - Г¤Г«Гї ГµГ°Г Г­ГҐГ­ГЁГї ГЄГ®Г®Г°Г¤ГЁГ­Г ГІ Г°Г ГЎГ®Г·ГҐГ© Г®ГЎГ«Г Г±ГІГЁ Г®ГЄГ­Г  
 
-	hdc = BeginPaint(hwnd, &ps);    // Получить хэндл контекста устройства
+	hdc = BeginPaint(hwnd, &ps);    // ГЏГ®Г«ГіГ·ГЁГІГј ГµГЅГ­Г¤Г« ГЄГ®Г­ГІГҐГЄГ±ГІГ  ГіГ±ГІГ°Г®Г©Г±ГІГўГ 
 	
 	font = CreateFontIndirect(&lf);
 	hOldFont = SelectObject(hdc, font);
@@ -207,43 +207,43 @@ void OnPaint(HWND hwnd)
 	SelectObject(hdc, hOldFont);
 	DeleteObject(font);
 
-	GetClientRect(hwnd, &rect);     // Получить координаты области для рисования
+	GetClientRect(hwnd, &rect);     // ГЏГ®Г«ГіГ·ГЁГІГј ГЄГ®Г®Г°Г¤ГЁГ­Г ГІГ» Г®ГЎГ«Г Г±ГІГЁ Г¤Г«Гї Г°ГЁГ±Г®ГўГ Г­ГЁГї
 
-	EndPaint(hwnd, &ps);            // Освободить контекст для корректной работы системы
+	EndPaint(hwnd, &ps);            // ГЋГ±ГўГ®ГЎГ®Г¤ГЁГІГј ГЄГ®Г­ГІГҐГЄГ±ГІ Г¤Г«Гї ГЄГ®Г°Г°ГҐГЄГІГ­Г®Г© Г°Г ГЎГ®ГІГ» Г±ГЁГ±ГІГҐГ¬Г»
 } // OnPaint
 
 
-// Обработчик сообщения WM_CLOSE - обработчик события "При закрытии окна" 
+// ГЋГЎГ°Г ГЎГ®ГІГ·ГЁГЄ Г±Г®Г®ГЎГ№ГҐГ­ГЁГї WM_CLOSE - Г®ГЎГ°Г ГЎГ®ГІГ·ГЁГЄ Г±Г®ГЎГ»ГІГЁГї "ГЏГ°ГЁ Г§Г ГЄГ°Г»ГІГЁГЁ Г®ГЄГ­Г " 
 void OnClose(HWND hwnd)
 {
 	DestroyWindow(hwnd);
 } // OnClose
 
 
-// Обработчик сообщения WM_DESTROY - обработчик события "При уничтожении окна" 
+// ГЋГЎГ°Г ГЎГ®ГІГ·ГЁГЄ Г±Г®Г®ГЎГ№ГҐГ­ГЁГї WM_DESTROY - Г®ГЎГ°Г ГЎГ®ГІГ·ГЁГЄ Г±Г®ГЎГ»ГІГЁГї "ГЏГ°ГЁ ГіГ­ГЁГ·ГІГ®Г¦ГҐГ­ГЁГЁ Г®ГЄГ­Г " 
 void OnDestroy(HWND hwnd)
 {
 	PostQuitMessage(0);
 } // OnDestroy
 
 
-// Ограничение минимального размера главного окна приложения
-// !! Работает вместе с OnSize !!
+// ГЋГЈГ°Г Г­ГЁГ·ГҐГ­ГЁГҐ Г¬ГЁГ­ГЁГ¬Г Г«ГјГ­Г®ГЈГ® Г°Г Г§Г¬ГҐГ°Г  ГЈГ«Г ГўГ­Г®ГЈГ® Г®ГЄГ­Г  ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГї
+// !! ГђГ ГЎГ®ГІГ ГҐГІ ГўГ¬ГҐГ±ГІГҐ Г± OnSize !!
 void OnGetMinMaxInfo(HWND hwnd, LPMINMAXINFO lpMinMaxInfo)
 {
 	lpMinMaxInfo->ptMinTrackSize = { 480, 240 };
 } // OnGetMinMaxInfo
 
 
-// Обработка сообщений WM_COMMAND - они посылаются от элементов управления
-// в частности - от кнопок
+// ГЋГЎГ°Г ГЎГ®ГІГЄГ  Г±Г®Г®ГЎГ№ГҐГ­ГЁГ© WM_COMMAND - Г®Г­ГЁ ГЇГ®Г±Г»Г«Г ГѕГІГ±Гї Г®ГІ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў ГіГЇГ°Г ГўГ«ГҐГ­ГЁГї
+// Гў Г·Г Г±ГІГ­Г®Г±ГІГЁ - Г®ГІ ГЄГ­Г®ГЇГ®ГЄ
 void OnCommand(HWND hwnd, int id, HWND hwndCtl, UINT codeNotify)
 {
 	BOOL bResult;
 
 	switch (id) {
-		// Выбор файла данных при помощи стандартного диалога и
-		// вывод данных из этого файла
+		// Г‚Г»ГЎГ®Г° ГґГ Г©Г«Г  Г¤Г Г­Г­Г»Гµ ГЇГ°ГЁ ГЇГ®Г¬Г®Г№ГЁ Г±ГІГ Г­Г¤Г Г°ГІГ­Г®ГЈГ® Г¤ГЁГ Г«Г®ГЈГ  ГЁ
+		// ГўГ»ГўГ®Г¤ Г¤Г Г­Г­Г»Гµ ГЁГ§ ГЅГІГ®ГЈГ® ГґГ Г©Г«Г 
 	case IDC_OPEN:
 		ofn.Flags = OFN_EXPLORER;
 		bResult = GetOpenFileName(&ofn);
@@ -254,7 +254,7 @@ void OnCommand(HWND hwnd, int id, HWND hwndCtl, UINT codeNotify)
 		weather.ListView(hLstWeather);
 		break;
 
-		// Выбор шрифта для вывода текста в ListView и установка шрифта
+		// Г‚Г»ГЎГ®Г° ГёГ°ГЁГґГІГ  Г¤Г«Гї ГўГ»ГўГ®Г¤Г  ГІГҐГЄГ±ГІГ  Гў ListView ГЁ ГіГ±ГІГ Г­Г®ГўГЄГ  ГёГ°ГЁГґГІГ 
 	case IDC_FONT:
 		cfont.lpLogFont = &lf;
 		cfont.rgbColors = colfont;
@@ -266,7 +266,7 @@ void OnCommand(HWND hwnd, int id, HWND hwndCtl, UINT codeNotify)
 		} // if
 		break;
 
-		// Выбор цвета для вывода текста в ListtView и установка цвета
+		// Г‚Г»ГЎГ®Г° Г¶ГўГҐГІГ  Г¤Г«Гї ГўГ»ГўГ®Г¤Г  ГІГҐГЄГ±ГІГ  Гў ListtView ГЁ ГіГ±ГІГ Г­Г®ГўГЄГ  Г¶ГўГҐГІГ 
 	case IDC_COLOR:
 		ccol.rgbResult = clf;
 		if (ChooseColor(&ccol)) {
@@ -285,8 +285,8 @@ void OnCommand(HWND hwnd, int id, HWND hwndCtl, UINT codeNotify)
 } // OnCommand
 
 
-// Отрисовка фона статического управляющего элемента
-// Фон - совпадает с фоном рабочей области окна
+// ГЋГІГ°ГЁГ±Г®ГўГЄГ  ГґГ®Г­Г  Г±ГІГ ГІГЁГ·ГҐГ±ГЄГ®ГЈГ® ГіГЇГ°Г ГўГ«ГїГѕГ№ГҐГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ 
+// Г”Г®Г­ - Г±Г®ГўГЇГ Г¤Г ГҐГІ Г± ГґГ®Г­Г®Г¬ Г°Г ГЎГ®Г·ГҐГ© Г®ГЎГ«Г Г±ГІГЁ Г®ГЄГ­Г 
 HBRUSH OnCtlColorStatic(HWND, HDC hdc, HWND, int)
 {
 	SetBkMode(hdc, TRANSPARENT);
