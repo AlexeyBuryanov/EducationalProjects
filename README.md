@@ -5,7 +5,7 @@
 Projects written for educational purposes and not only.
 
 [favorite-image]: star.svg
-![favorite-proj][favorite-image] — favorite project. That is, the project on which it is worth paying attention.
+![favorite-proj][favorite-image] &mdash; favorite project. That is, the project on which it is worth paying attention.
   
 [license-image]: https://img.shields.io/npm/l/normalize.css.svg?style=flat
 [license-url]: LICENSE
