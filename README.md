@@ -4,7 +4,7 @@
 # Educational Projects
 Projects written for educational purposes and not only.
 
-[favorite-image]: ic_star_rate_black_18px.svg
+[favorite-image]: black_star_18px.svg
 ![favorite-proj][favorite-image] — favorite project. That is, the project on which it is worth paying attention.
   
 [license-image]: https://img.shields.io/npm/l/normalize.css.svg?style=flat
