@@ -1,15 +1,15 @@
 <a href="https://github.com/AlexeyBuryanov/EducationalProjects/"><img
   src="projects.jpg" alt="Repository Icon"
   width="80" height="80" align="right"></a>
-# Educational Projects
+
+[license-image]: https://img.shields.io/npm/l/normalize.css.svg?style=flat
+[license-url]: LICENSE
+
+# Educational Projects     [![license][license-image]][license-url]
 Projects written for educational purposes and not only.
 
 [favorite-image]: star.svg
 ![favorite-proj][favorite-image] &mdash; favorite project. That is, the project on which it is worth paying attention.
-  
-[license-image]: https://img.shields.io/npm/l/normalize.css.svg?style=flat
-[license-url]: LICENSE
-[![license][license-image]][license-url]
 
 ## Win32 API
 **[House](Win32API/House/)**, **[Lists](Win32API/Lists/)**, **[MenuComboFigures](Win32API/MenuComboFigures/)**, **[Patients](Win32API/Patients/)**, **[Pizza](Win32API/Pizza/)**, **[PriceList](Win32API/PriceList/)**, **[SimpleCalculator](Win32API/SimpleCalculator/)**, ![favorite-proj][favorite-image]**[TicTacToe](Win32API/TicTacToe/)**, **[Variants](Win32API/Variants/)**, **[Variants19-20](Win32API/Variants19-20/)**, **[ViewWeather](Win32API/ViewWeather/)**, **[Worker](Win32API/Worker/)**.
