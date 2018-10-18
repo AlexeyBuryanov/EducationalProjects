@@ -5,7 +5,7 @@
 [license-image]: https://img.shields.io/npm/l/normalize.css.svg?style=flat
 [license-url]: LICENSE
 
-# Educational Projects     [![license][license-image]][license-url]
+# Educational Projects [![license][license-image]][license-url]
 Projects written for educational purposes and not only.
 
 [favorite-image]: star.svg
@@ -22,4 +22,8 @@ Projects written for educational purposes and not only.
 ### WPF + ADO.NET + MS SQL
 ![favorite-proj][favorite-image]**[InsuranceAgency](WPF/InsuranceAgency/)**.
 
-### ![favorite-proj][favorite-image]**[Simple Android Projects](https://github.com/AlexeyBuryanov/SimpleAndroidProjects)**.
+---
+
+### ![favorite-proj][favorite-image]**[Android Projects](https://github.com/AlexeyBuryanov/SimpleAndroidProjects)**.
+
+### ![favorite-proj][favorite-image]**[Java Projects](Java/)**.
