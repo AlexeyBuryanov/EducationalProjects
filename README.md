@@ -27,3 +27,5 @@ Projects written for educational purposes and not only.
 ### ![favorite-proj][favorite-image]**[Android Projects](https://github.com/AlexeyBuryanov/SimpleAndroidProjects)**.
 
 ### ![favorite-proj][favorite-image]**[Java Projects](Java/)**.
+
+### **[PHP Projects](PHP/)**.
