@@ -28,4 +28,4 @@ Projects written for educational purposes and not only.
 
 ### ![favorite-proj][favorite-image]**[Java Projects](Java/)**.
 
-### **[PHP Projects](PHP/)**.
+### **[Simple PHP Projects](PHP/)**.
