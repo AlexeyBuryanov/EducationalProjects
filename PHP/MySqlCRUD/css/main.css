@@ -1,0 +1,173 @@
+/* Общие ------------------------------------------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    background-color: #DDD;
+    color: #333;
+    font-family: 'segoe UI', arial, sans-serif;
+    font-size: 14pt;
+	display: flex; /* body как flex-контейнер */
+	flex-direction: column; /* направление: по вертикали  */
+}
+
+a {
+    color: #0066FF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF0000;
+}
+
+a, a:hover {
+    -webkit-transition: all.6s ease;  /* chrome, safari */
+    -moz-transition: all.6s ease;     /* firefox */ 
+    -o-transition: all.6s ease;       /* opera */
+    transition: all.6s ease;          /* IE и др. */
+}
+
+.wrapper {
+	padding: 0;
+    margin: 0;
+}
+
+/* Шапка ------------------------------------------------------------------- */
+header {
+    top: 0;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background-color: #000;
+    font-family: helvetica, 'segoe UI', arial, sans-serif;
+    font-size: 14pt;
+}
+
+header .header_top {
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+/* иконка */
+header .header_top .logo-ico {
+    padding-left: 10px;
+    font-size: 30pt;
+}
+
+header .header_top a {
+    color: #CCCCCC;
+}
+
+header .header_top a:hover {
+    color: #00CC33;
+}
+
+/* заголовок */
+header .header_top .logo {
+    font-size: 20pt;
+    font-weight: bold;
+    color: #FFF;
+}
+
+/* навигация */
+header .main_nav {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+}
+
+header .main_nav ul, li {
+    height: 100%;
+}
+
+header .main_nav ul li {
+    display: inline-block;
+}
+
+header .main_nav ul li a {
+    padding: 14px;
+    display: block;
+    color: #ADADAD;
+}
+
+header .main_nav ul li a:hover {
+    color: #FFF;
+    background-color: #333;
+}
+
+/* Основной контент -------------------------------------------------------- */
+.main_content-wrap {
+    width: 100%;
+    max-width: 1010px;
+    margin: auto;
+    margin-top: 80px;
+    padding: 20px;
+    background-color: #FFF;
+    overflow: hidden;
+    flex-grow: 1; /* занять всё пространство родительского блока*/
+    align-content: center;
+}
+
+.separator {
+    width: 100%;
+    max-width: 1049px;
+    margin: 0 auto;
+    height: 30px;
+    border: 1px solid #EEE;
+    background-color: #FAFAFA;
+}
+
+/* Подвал ------------------------------------------------------------------ */
+footer {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+    height: 100px;
+    background-color: #262626;
+    overflow: hidden;
+}
+
+footer .footer_content {
+    padding: 20px;
+}
+
+footer .footer_content .footer_content-left {
+    float: left;
+    width: 50%;
+}
+
+footer .footer_content .footer_content-left .footer_copyright {
+    color: gray;
+    font-size: 11pt;
+}
+
+footer .footer_content .footer_content-right {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+
+footer .footer_content .footer_content-right .footer_author {
+    font-size: 8pt;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+footer .footer_content .footer_content-right .footer_social {
+    font-size: 20pt;
+}
+
+footer .footer_content .footer_content-right .footer_social li {
+    display: inline-block;
+}
