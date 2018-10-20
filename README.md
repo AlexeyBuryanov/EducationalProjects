@@ -19,7 +19,7 @@ Projects written for educational purposes and not only.
     
 ## Windows Presentation Foundation
 **[Layouts](WPF/Layouts/)**, **[Car company](WPF/Car_company/)**, **[Car sale](WPF/Car_sale/)**, **[SimpleDrawings](WPF/SimpleDrawings/)**.
-### WPF + ADO.NET + MS SQL
+### WPF + ADO.NET + MS SQL + Custom window and styles
 ![favorite-proj][favorite-image]**[InsuranceAgency](WPF/InsuranceAgency/)**.
 ### WPF + WCF
 ![favorite-proj][favorite-image]**[ServerProcesses](WPF/ServerProcesses/)**.
