@@ -18,7 +18,7 @@ Projects written for educational purposes and not only.
 ![favorite-proj][favorite-image]**[HanoiTower](WindowsForms/HanoiTower/)**, **[ListBox](WindowsForms/ListBox/)**, ![favorite-proj][favorite-image]**[ListViewShip](WindowsForms/ListViewShip/)**, **[Students](WindowsForms/Students/)**, **[TableFunctions](WindowsForms/TableFunctions/)**.
     
 ## Windows Presentation Foundation
-**[Layouts](WPF/Layouts/)**, **[Car company](WPF/Car_company/)**, **[Car sale](WPF/Car_sale/)**, **[SimpleDrawings](WPF/SimpleDrawings/)**.
+**[Layouts](WPF/Layouts/)**, **[Car company](WPF/Car_company/)**, **[Car sale](WPF/Car_sale/)**, **[SimpleDrawings](WPF/SimpleDrawings/)**, ![favorite-proj][favorite-image]**[HtmlDownloader](WPF/HtmlDownloader/)**, ![favorite-proj][favorite-image]**[PluginsAssembly](WPF/PluginsAssembly/)**.
 ### WPF + ADO.NET + MS SQL + Custom window and styles
 ![favorite-proj][favorite-image]**[InsuranceAgency](WPF/InsuranceAgency/)**.
 ### WPF + WCF
