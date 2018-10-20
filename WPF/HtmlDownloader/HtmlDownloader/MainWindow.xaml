@@ -1,0 +1,116 @@
+﻿<Window x:Class="HtmlDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HtmlDownloader"
+        mc:Ignorable="d"
+        
+        Title="Главное окно"
+        MinHeight="400" MinWidth="750"
+        Height="500" Width="870" 
+        ResizeMode="CanResizeWithGrip"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Menu 
+            x:Name="MenuMain" 
+            Grid.Row="0" 
+            FontSize="13"
+            FontWeight="Medium"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Background="White">
+            <MenuItem 
+                Header="_Файл">
+                <MenuItem 
+                    Header="_Открыть..." 
+                    Click="MenuMainOpen_Click" />
+                <MenuItem
+                    x:Name="MenuItemSave"
+                    Header="_Сохранить" 
+                    Click="MenuMainSave_Click"
+                    IsEnabled="False" />
+                <Separator/>
+                <MenuItem
+                    x:Name="MenuItemSaveAs"
+                    Header="Сохранить _как..." 
+                    Click="MenuMainSaveAs_Click"
+                    IsEnabled="False" />
+                <Separator/>
+                <MenuItem 
+                    Header="Вы_ход" 
+                    Click="MenuMainExit_Click" />
+            </MenuItem>
+        </Menu>
+        <StackPanel
+            Grid.Row="0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Orientation="Horizontal">
+            <Label
+                Height="25"
+                FontWeight="Medium"
+                Target="{Binding ElementName=textBoxAddress}"
+                >_Адрес веб-сайта:</Label>
+            <TextBox
+                x:Name="textBoxAddress"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Center"
+                Text="http://korrespondent.net/"
+                Width="450"/>
+            <Button 
+                x:Name="buttonSave"
+                Height="23"
+                Margin="15, 0, 15, 0"
+                Width="100"
+                Click="ButtonSave_Click"
+                Content="Скачать"/>
+        </StackPanel>
+
+        <Grid 
+            Grid.Row="1">
+            <TextBox
+                x:Name="textBoxMain"
+                FontSize="14" 
+                TextOptions.TextFormattingMode="Display" 
+                ScrollViewer.CanContentScroll="True" 
+                VerticalScrollBarVisibility="Auto" 
+                HorizontalScrollBarVisibility="Auto"/>
+        </Grid>
+
+        <StatusBar
+            Grid.Row="2"
+            FontSize="13"
+            FontWeight="Medium"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Center">
+            <StatusBarItem>
+                <TextBlock 
+                    x:Name="Status" 
+                    Text="Добро пожаловать"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+            </StatusBarItem>
+            <StatusBarItem
+                HorizontalAlignment="Right">
+                <ProgressBar 
+                    x:Name="progressBar"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Height="20"
+                    Width="300"
+                    Margin="0, 0, 20, 0">
+                    <ProgressBar.Effect>
+                        <BlurEffect />
+                    </ProgressBar.Effect>
+                </ProgressBar>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
